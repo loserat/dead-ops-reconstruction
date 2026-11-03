@@ -15,7 +15,7 @@ Waffen-, Punkte-, Fahrzeug- und Koop-Regeln beruhen auf dokumentierten Beobachtu
 
 Die 14 Laufzeit-PNGs, das lokale App-Icon und dessen Ausgangsbild gehören zum eigenen Projektbestand. Die Boden- und Umgebungstexturen wurden für dieses Projekt erzeugt; darunter KI-generierte Ausgangstexturen und daraus vorbereitete Bodenfelder. Figuren, Fahrzeuge und Kartenobjekte werden überwiegend aus Geometrie im Swift-Code aufgebaut. Es werden keine aus dem Originalspiel extrahierten Textur- oder Modellpakete veröffentlicht.
 
-Die [Assetliste](ASSETS.json) enthält die Dateinamen, Größen und SHA-256-Prüfsummen der aufgenommenen Grafiken. Die lokalen ursprünglichen Erzeugungsprotokolle bleiben außerhalb des Repositorys, da sie Arbeitsrechnerpfade und umfangreiche Historie enthalten. Das Vorschaubild in der README stammt aus dem eigenen Renderer.
+Die [Assetliste](ASSETS.json) enthält die Dateinamen, Größen und SHA-256-Prüfsummen der aufgenommenen Grafiken. Die lokalen ursprünglichen Erzeugungsprotokolle bleiben außerhalb des Repositorys, da sie Arbeitsrechnerpfade und umfangreiche Historie enthalten. Die drei Vorschaubilder in der README stammen aus dem eigenen Renderer und zeigen kontrollierte Testszenen der Version 0.81. Die [Bildliste](SCREENSHOTS.json) dokumentiert Szenen und Prüfsummen.
 
 ## Ton und Musik
 

@@ -1,5 +1,12 @@
 # Änderungen
 
+## README-Ausbau – 03.11.2026
+
+- Startseite mit App-Icon, Sprungnavigation und drei eigenen In-Engine-Vorschauen gestaltet.
+- Spielprinzip, Arenen, Koop, Waffen, Lebensfunde und Steuerung verständlicher erklärt.
+- Bildherkunft dokumentiert und Dokumentationsprüfung auf HTML-Bildverweise erweitert.
+- Nur Dokumentation und Bildauswahl geändert; Spielquellen und Version bleiben 0.81.
+
 ## 0.81 – 03.11.2026: nachvollziehbarer Quellstand für GitHub
 
 - Die acht bereits geprüften Kamera-, Boden-, Kartenobjekt- und HUD-Ergänzungen von 0.80/0.81 im gemeinsamen Hauptprojekt zusammengeführt.

@@ -1,0 +1,29 @@
+{
+  "images": [
+    {
+      "image": "images/island-0.81.png",
+      "scene": "Insel, Runde 1, Einzelspieler",
+      "version": "0.81",
+      "origin": "native rendered verification scene; controlled game state, not a live play-session screen capture",
+      "bytes": 1466628,
+      "sha256": "bc75a2fc089149bed82dbc591b8c1559cbce3d609d1267140069aeeae994b0d7"
+    },
+    {
+      "image": "images/courtyard-0.81.png",
+      "scene": "Innenhof, Runde 5, Einzelspieler",
+      "version": "0.81",
+      "origin": "native rendered verification scene; controlled game state, not a live play-session screen capture",
+      "bytes": 1614732,
+      "sha256": "7ea793daab631c2372e81efad59100816140d9a465d271413656c61cb71c7596"
+    },
+    {
+      "image": "images/coop-0.81.png",
+      "scene": "Innenhof, Runde 8, vier Spieler",
+      "version": "0.81",
+      "origin": "native rendered verification scene; controlled game state, not a live play-session screen capture",
+      "bytes": 1468198,
+      "sha256": "a4b67fbf24d2196566c27a83c69abc73b575bd589bd68b28af92cee96d735cd6"
+    }
+  ],
+  "additional_generated_images": false
+}

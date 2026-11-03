@@ -1,15 +1,34 @@
 """Check local documentation links without fetching or executing external content."""
 from pathlib import Path
+from html.parser import HTMLParser
 import re
 import sys
 from urllib.parse import unquote
 
 root = Path(__file__).resolve().parents[1]
+
+
+class HtmlReferences(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.targets = []
+
+    def handle_starttag(self, tag, attrs):
+        attribute = {'img': 'src', 'a': 'href'}.get(tag)
+        target = dict(attrs).get(attribute)
+        if target:
+            self.targets.append(target)
+
+
 documents = list(root.glob('*.md')) + list((root / 'docs').rglob('*.md'))
 errors = []
 count = 0
 for path in documents:
-    for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)', path.read_text()):
+    content = path.read_text()
+    html = HtmlReferences()
+    html.feed(content)
+    targets = re.findall(r'!?\[[^\]]*\]\(([^)]+)\)', content) + html.targets
+    for target in targets:
         target = target.split('#', 1)[0]
         if not target or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', target):
             continue
