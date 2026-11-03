@@ -1,0 +1,7 @@
+OPTIONALE EIGENE MUSIK
+Hier kannst du vorhandene WAV-, MP3-, M4A-, AIF-, AIFF- oder CAF-Dateien ablegen.
+Ein neuer Xcode-Build nimmt diesen Ordner als Music ins App-Paket auf.
+Der Kommandozeilen-Build kopiert unterstützte Audiodateien daraus ebenfalls.
+Keine Originaltitel sind enthalten; der Albumlink allein ist keine Audiodatei.
+Mac-Importe über das App-Menü liegen im Benutzerbereich und landen nicht
+von selbst in diesem Projektordner oder auf dem Apple TV.

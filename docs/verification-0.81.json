@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-03",
+  "version": "0.81",
+  "xcode": "27.0",
+  "platform": "Apple Silicon Mac",
+  "checks": {
+    "logic": {
+      "exit": 0,
+      "suites": 55,
+      "pass_lines": 6163
+    },
+    "opening_simulations": {
+      "exit": 0,
+      "runs": 6,
+      "summary_lines": [
+        "PASS first eight normal rounds seed0:350 simulated seconds,21039 frames,4 lives remaining,0 deaths,2 side rooms,1 found gun types,0 invalid positions,no Godmode or injected equipment",
+        "PASS first eight normal rounds seed31:312 simulated seconds,18754 frames,3 lives remaining,0 deaths,2 side rooms,5 found gun types,0 invalid positions,no Godmode or injected equipment",
+        "PASS first eight normal rounds seed113:300 simulated seconds,18056 frames,3 lives remaining,0 deaths,1 side rooms,2 found gun types,0 invalid positions,no Godmode or injected equipment",
+        "PASS cooperative first eight:team2,seed0,342simulatedSeconds,20529sharedFrames,2sideRooms,0invalidPositions,noGodmodeOrInjectedEquipment;simulation only,no controller/render/hardware claim",
+        "PASS cooperative first eight:team4,seed31,314simulatedSeconds,18881sharedFrames,2sideRooms,0invalidPositions,noGodmodeOrInjectedEquipment;simulation only,no controller/render/hardware claim",
+        "PASS cooperative first eight:team2,seed113,288simulatedSeconds,17309sharedFrames,1sideRooms,0invalidPositions,noGodmodeOrInjectedEquipment;simulation only,no controller/render/hardware claim"
+      ]
+    },
+    "mac_direct_build": {
+      "exit": 0,
+      "version": "0.81",
+      "build": "81"
+    },
+    "mac_xcode_release_build": {
+      "exit": 0,
+      "code_signing_allowed": false,
+      "version": "0.81",
+      "build": "81"
+    },
+    "tvos_device_sdk_build": {
+      "exit": 0,
+      "physical_device_tested": false
+    },
+    "native_package": {
+      "exit": 0
+    },
+    "native_camera": {
+      "exit": 0,
+      "images": 42,
+      "geometry_projections": 8568,
+      "map_entry_projections": 4592
+    }
+  },
+  "fresh_export_build": {
+    "exported_files": 217,
+    "build_exit": 0,
+    "native_package_exit": 0,
+    "local_history_directories_available": false,
+    "temporary_checkout_removed": true
+  },
+  "stable_60_fps_accepted": false,
+  "physical_ps5_acceptance": false,
+  "listening_acceptance": false,
+  "new_visible_window_test": false,
+  "full_original_video_motion_audio_review": false,
+  "reference_game_exact_parity": false
+}

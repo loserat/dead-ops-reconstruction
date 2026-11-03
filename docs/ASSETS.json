@@ -1,0 +1,101 @@
+{
+  "runtime_png_count": 14,
+  "files": [
+    {
+      "path": "Assets/cave-stone-v08.png",
+      "bytes": 3567154,
+      "sha256": "f6356b33961fa7c0903ac64b7e18ba621534810324bf52e88e2fe40fd56dd8f1",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/cloth-canvas-v37.png",
+      "bytes": 3673772,
+      "sha256": "18d90c9fc271a1a17398f32fb3dcda14126ba3848d46463ba163144dd28a1aa9",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/courtyard-stone-v03.png",
+      "bytes": 3523299,
+      "sha256": "7d5f7c9f02e668710e16422e9836e82aac375155ed205cec997fe9905e8ffa27",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/ground-olive-v2.png",
+      "bytes": 3851371,
+      "sha256": "a1ab4b460514519692863e82777d1afb57b6d9a90153e0953a82bf96d6627ce9",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/market-dirt-v09.png",
+      "bytes": 3729630,
+      "sha256": "c6326d30c83aa6ab033b209444169413efa0d3088df78c04c2a56a9aca1a8e95",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/opening-courtyard-v59.png",
+      "bytes": 6184810,
+      "sha256": "bfb01f1559d839bd9c8db990c6890264e5cf60116db4cd5fa4728207d792cc02",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/opening-island-v59.png",
+      "bytes": 3100562,
+      "sha256": "392e0a7e55fd775dbf828b87a5c90d98cbc636c870a9e2effe316c38676ecf3f",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/palm-crown-v2.png",
+      "bytes": 2510125,
+      "sha256": "86bf338a8c674deae9510f1dc8c4c041c7a5dca730a86be1b5265a72c5e0baf5",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/path-earth-v59.png",
+      "bytes": 3620027,
+      "sha256": "45ae100c1203ff44f8067610045584b8cbbbc1ab71354f1aa265fe0d64977d92",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/paving-limestone-v59.png",
+      "bytes": 3579263,
+      "sha256": "6ea9d8fccbdc21dbabe010dbd62891ec4fa6852f34111e17948a9718822eb845",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/prison-gravel-v07.png",
+      "bytes": 3902806,
+      "sha256": "f721648f1aadc8471c32b6af493c4d79c9d5178521cd1dccf35ab833861893f8",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/snow-yard-v12.png",
+      "bytes": 3591371,
+      "sha256": "5bf1f5dc9379a8725102df8d2e5e9fbbf9afd615efbee81a8b7494a7ab141d29",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/urban-concrete-v10.png",
+      "bytes": 3681438,
+      "sha256": "32c14b70878e3216c8e2d08924b9d3b927cd8c406aea2b1894137779fc8a4ebd",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/winter-crown-v15.png",
+      "bytes": 2471281,
+      "sha256": "a7356ab78336138d0f0bd4a1c38c2ddbb5fa64b879916a1704e4d22268733ef3",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/DeadOps.icns",
+      "bytes": 3523191,
+      "sha256": "735fbc8a90dac60b938ba75802ef278aeadc9652dd68c6733b05bb93eb888e45",
+      "origin": "project-generated graphic; local generation records retained separately"
+    },
+    {
+      "path": "Assets/AppIcon/DeadOps-Icon.png",
+      "bytes": 2950670,
+      "sha256": "5b3d3b91971defb7e0fb04a8a9c3b3578bd6e8ad705a44abcc8f2afd70390b47",
+      "origin": "project-generated graphic; local generation records retained separately"
+    }
+  ]
+}
