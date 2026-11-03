@@ -4,6 +4,8 @@
   <p><strong>Eine Arena. Zwei Sticks. Die nächste Welle.</strong></p>
   <p>Ein natives Arcade-Projekt für den Mac – inspiriert von Dead Ops Arcade.</p>
   <p><code>Version 0.81</code> · <code>1–4 Spieler lokal</code> · <code>Mac zuerst</code> · <code>tvOS in Entwicklung</code></p>
+  <p><a href="https://github.com/loserat/dead-ops-reconstruction/releases/download/v0.81/DeadOps-Reconstruction-0.81-macOS-arm64.zip"><img src="docs/images/download-mac.svg" alt="Mac-App herunterladen – Apple Silicon, macOS 14 oder neuer" width="316" height="64"></a></p>
+  <p>Fertige Mac-Vorabversion · Kein Xcode nötig · <a href="docs/INSTALLATION.md#erster-start">Hinweis zum ersten Start</a></p>
 </div>
 
 <p align="center">
@@ -85,6 +87,18 @@ Wer Abläufe in Ruhe kennenlernen möchte, kann in den Einstellungen **Godmode**
 
 ## Losspielen
 
+### Fertige Mac-App herunterladen
+
+1. **[Mac-App 0.81 herunterladen](https://github.com/loserat/dead-ops-reconstruction/releases/download/v0.81/DeadOps-Reconstruction-0.81-macOS-arm64.zip)** und das ZIP entpacken.
+2. **Dead Ops Reconstruction.app** in den Ordner **Programme** ziehen.
+3. Die App öffnen und mit Tastatur oder Controller spielen.
+
+Du brauchst einen **Mac mit Apple-Chip (M1 oder neuer) und macOS 14+**. Xcode und Python sind zum Spielen nicht erforderlich.
+
+**Erster Start:** Diese Vorabversion ist lokal signiert und noch nicht von Apple notarisiert. macOS kann deshalb eine zusätzliche Freigabe verlangen. Die [Installationsanleitung](docs/INSTALLATION.md#erster-start) erklärt den vorgesehenen Weg. Weitere Dateiinformationen und die Prüfsumme stehen im [GitHub-Release](https://github.com/loserat/dead-ops-reconstruction/releases/tag/v0.81).
+
+### Selbst bauen
+
 **Du brauchst:** einen Mac mit Apple-Chip, macOS 14 oder neuer, eine vollständige Xcode-Installation und Python 3. Der direkte Build richtet sich derzeit an `arm64`; Intel-Macs sind nicht verifiziert.
 
 ```sh
@@ -96,7 +110,7 @@ open Build/Mac/DeadOpsReconstruction.app
 
 **Lieber mit Xcode?** `DeadOpsReconstruction.xcodeproj` öffnen, **Dead Ops Mac** und **My Mac** auswählen und starten. Xcode und der direkte Build verwenden denselben Quellstand 0.81.
 
-Die App verwendet Swift, SceneKit, SpriteKit und GameController. Zusätzliche Swift-Pakete, eine REA-Installation oder API-Schlüssel sind nicht erforderlich. Die Mac-App wird beim direkten Build lokal signiert. Dies ist aktuell ein Quellprojekt zum Selberbauen; ein notarisiertes Installationspaket ist nicht enthalten.
+Die App verwendet Swift, SceneKit, SpriteKit und GameController. Zusätzliche Swift-Pakete, eine REA-Installation oder API-Schlüssel sind nicht erforderlich. Die Mac-App wird beim direkten Build lokal signiert. Ein von Apple notarisiertes Paket ist noch nicht vorhanden.
 
 Für Apple TV gibt es ein tvOS-Ziel. SDK-Build, Signierung und Installation beschreibt die [Installationsanleitung](docs/INSTALLATION.md).
 

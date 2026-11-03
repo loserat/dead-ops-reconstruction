@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="316" height="64" viewBox="0 0 316 64" role="img" aria-labelledby="title desc">
+  <title id="title">Mac-App herunterladen</title>
+  <desc id="desc">Version 0.81 für Apple Silicon und macOS 14 oder neuer</desc>
+  <rect x="1" y="1" width="314" height="62" rx="14" fill="#17232b" stroke="#f0b34e" stroke-width="2"/>
+  <path d="M32 18v20m-7-7 7 7 7-7M22 40v7h20v-7" fill="none" stroke="#f0b34e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="57" y="29" fill="#ffffff" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700">Mac-App herunterladen</text>
+  <text x="57" y="47" fill="#bfcdd6" font-family="system-ui,-apple-system,sans-serif" font-size="12">0.81 · Apple Silicon · macOS 14+</text>
+</svg>

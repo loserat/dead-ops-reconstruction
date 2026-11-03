@@ -1,5 +1,12 @@
 # Änderungen
 
+## Mac-Download 0.81 – 03.11.2026
+
+- Fertige Mac-Vorabversion für Apple Silicon und macOS 14+ als GitHub-Release vorbereitet.
+- Download-Button und einfache Installationsanleitung ergänzt; zum Spielen ist Xcode nicht erforderlich.
+- Wiederholbare Paketierung mit Ressourcenprüfung, App-Signatur, Paketmanifest und ZIP-Prüfsumme hinzugefügt.
+- Lokale Signierung und fehlende Apple-Notarisierung ausdrücklich dokumentiert. Spielquellen bleiben unverändert.
+
 ## README-Ausbau – 03.11.2026
 
 - Startseite mit App-Icon, Sprungnavigation und drei eigenen In-Engine-Vorschauen gestaltet.

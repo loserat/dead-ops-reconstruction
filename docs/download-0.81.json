@@ -1,0 +1,19 @@
+{
+  "version": "0.81",
+  "release_tag": "v0.81",
+  "built_from_commit": "5306b6a39cf6efdfb4c2b2063a5c921923b36a11",
+  "asset": "DeadOps-Reconstruction-0.81-macOS-arm64.zip",
+  "bytes": 55484409,
+  "sha256": "61cf98c5a73525809ab8c9067ab8a3d39883352833e6c936171cd66935d31e0d",
+  "architecture": "arm64",
+  "minimum_macos": "14.0",
+  "signature": "ad-hoc",
+  "notarized": false,
+  "gatekeeper_standard_assessment_accepted": false,
+  "unpacked_signature_exit": 0,
+  "unpacked_native_package_exit": 0,
+  "resource_files_checked": 15,
+  "external_mac_tested": false,
+  "physical_controller_tested": false,
+  "developer_tools_required_to_play": false
+}

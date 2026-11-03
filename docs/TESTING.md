@@ -41,3 +41,18 @@ Die alte Kameraprüfung erwartete vollständig sichtbare entfernte Außenwege. S
 Für den früheren 0.81-Kandidaten existiert ein kurzer nativer Lasttest im Fenster. Dabei blieben unter hoher Last langsamere Einzelbilder vorhanden; stabile 60 FPS wurden nicht abgenommen. Der neue zusammengeführte Quellstand hat durch die Veröffentlichung keine zusätzliche Echtfenster-Leistungsabnahme erhalten.
 
 Weiter offen: längerer normaler Lauf im echten 0.81-Spielfenster, menschliche Bewertung von Perspektive und Balance, aktuelle physische PS5-/Mehrcontroller-Prüfung, Hörabnahme und Apple-TV-Gerätelauf. Einzelbilder, Compiler-Erfolg und automatisierte Piloten ersetzen diese Prüfungen nicht.
+
+
+## Mac-Download 0.81
+
+Das fertige ZIP wurde aus dem veröffentlichten Quellstand `5306b6a` gebaut;
+die Spielquellen blieben danach unverändert. Es wurde erneut entpackt:
+Ausführbarkeit, strenge lokale App-Signatur, alle 15 Ressourcen und die
+native Paketprüfung bestanden. Es werden nur Systembibliotheken benötigt.
+Die [Download-Prüfübersicht](download-0.81.json) enthält Größe und Prüfsumme.
+
+Die lokale Gatekeeper-Standardbewertung wurde abgewiesen: Das Paket ist
+ad-hoc-signiert und nicht von Apple notarisiert. Dies ist ausdrücklich keine
+bestandene normale Weitergabeprüfung. Hinweise zum ersten Start stehen in
+der [Installation](INSTALLATION.md#erster-start). Ein Fremd-Mac- oder neuer
+physischer Controller-Test ist damit nicht ersetzt.
