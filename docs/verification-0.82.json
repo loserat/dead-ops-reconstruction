@@ -1,7 +1,7 @@
 {
   "version": "0.82",
   "date": "2026-11-06",
-  "publication": "Local only; published v0.81 unchanged",
+  "publication": "Source version0.82; published Mac download remains v0.81",
   "logic": {
     "programs": 55,
     "pass_lines": 6163,

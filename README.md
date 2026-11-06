@@ -3,7 +3,7 @@
   <h1>Dead Ops Reconstruction</h1>
   <p><strong>Arcade-Action für deinen Mac. Allein oder mit Freunden.</strong></p>
   <p>Bewegen, ausweichen, bessere Waffen finden – und die nächste Welle überstehen.</p>
-  <p><code>Vorabversion 0.81</code> · <code>1–4 Spieler lokal</code> · <code>Mac mit Apple-Chip</code></p>
+  <p><code>Download 0.81</code> · <code>Quellcode 0.82</code> · <code>1–4 Spieler lokal</code> · <code>Mac mit Apple-Chip</code></p>
   <p><a href="https://github.com/loserat/dead-ops-reconstruction/releases/download/v0.81/DeadOps-Reconstruction-0.81-macOS-arm64.zip"><img src="docs/images/download-mac.svg" alt="Mac-App herunterladen – Apple Silicon, macOS 14 oder neuer" width="316" height="64"></a></p>
   <p>55 MB · macOS 14 oder neuer · Kein Xcode nötig</p>
 </div>
@@ -81,7 +81,9 @@ Alle Spieler teilen sich die Arena und die Kamera. Eigene Farben und Statuskarte
 
 ## Entwicklungsstand
 
-**0.81 ist eine spielbare Vorabversion.** Eigene Grafiken, Modelle und Geräusche sind vorhanden. Originalwerte, Kartenoptik und Abläufe werden noch verfeinert.
+**Der Quellcode steht auf 0.82; die fertige App zum Download bleibt vorerst 0.81.** Eigene Grafiken, Modelle und Geräusche sind vorhanden. Originalwerte, Kartenoptik und Abläufe werden noch verfeinert.
+
+Neu in 0.82: weniger Rechenaufwand für die Gegneranimation, deutlichere Schatten auf Insel und Innenhof, abgestimmtes Abend- und Nachtlicht sowie dunkleres, ruhigeres Wasser. Die ganze spielbare Karte bleibt sichtbar. Im kontrollierten Vergleich mit 176 Gegnern benötigte die reine Animation im Median rund 52 % weniger Rechenzeit. Das ist keine Verdoppelung der gesamten Bildrate; unter hoher Last bleiben einzelne Ruckler. [Änderungen](CHANGELOG.md) · [Messwerte und Prüfgrenzen](docs/TESTING.md).
 
 Als Nächstes stehen flüssiger Betrieb bei hoher Last, Spielgefühl und Erkennbarkeit im Mittelpunkt. Stabile 60 FPS sowie aktuelle Fremd-Mac-, Controller- und Hörtests sind noch offen. Apple TV hat ein eigenes Entwicklungsziel; der Mac-Download ist für macOS bestimmt.
 
@@ -90,7 +92,7 @@ Wenn dir etwas auffällt, freuen wir uns über [einen Fehlerbericht](https://git
 <details>
 <summary><strong>Welche Prüfungen gibt es bereits?</strong></summary>
 
-Für den Spielquellstand 0.81 sind Mac- und tvOS-SDK-Builds, 55 Logik-Prüfprogramme und sechs automatische Acht-Runden-Durchläufe bestanden. Dazu kommen native Paket- und Kameraprüfungen. Das veröffentlichte ZIP wurde erneut heruntergeladen und per Prüfsumme geprüft.
+Für den Spielquellstand 0.82 sind Mac- und tvOS-SDK-Builds, 55 Logik-Prüfprogramme und sechs automatische Acht-Runden-Durchläufe bestanden. Dazu kommen native Paket-, Figuren-, Kamera- und Fallprüfungen sowie kurze Lasttests im Mac-Spielfenster. Das veröffentlichte ZIP der Version 0.81 wurde erneut heruntergeladen und per Prüfsumme geprüft.
 
 Die [Prüfdokumentation](docs/TESTING.md) erklärt Umfang und Grenzen. Automatisierte Prüfungen ersetzen keine menschliche Spielrunde oder Prüfung auf einem anderen Gerät.
 

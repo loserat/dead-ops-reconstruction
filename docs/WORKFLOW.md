@@ -10,6 +10,14 @@
 
 Keine Spielregeln vereinfachen oder Godmode einschalten, um einen normalen Durchlauf bestehen zu lassen. Gestellte Lasttests zusätzlich und ausdrücklich als solche ausweisen. Menschliches Spielgefühl und physische Controller benötigen eigene Abnahme.
 
+Für Animation und Beleuchtung gibt es einen unabhängigen nativen Vergleich:
+
+```sh
+python3 scripts/check_mac_render.py Build/RenderReport
+```
+
+Er baut die produktiven Quellen mit einem separaten Prüfeinstieg, vergleicht die Gelenkbewegungen mit dem bisherigen Ablauf und misst sechs Lichtszenen sowie die Bildvorbereitung unter kontrollierter Last. Ein neues Ausgabeziel wählen; der Test überschreibt keine vorhandenen Berichte. Ein verfügbarer Metal-Grafikprozessor ist erforderlich. Er erzeugt eigene Szenenbilder, ohne Bildschirmaufnahme, echte Eingaben oder Ton. Der Vergleich ersetzt den anschließenden Lasttest im Spielfenster nicht. Die Messwerte und verbleibenden Grenzen stehen in [TESTING](TESTING.md).
+
 ## Git und Versionen
 
 `main` enthält den nachvollziehbaren Entwicklungsstand. Größere Änderungen auf einem kurzen Arbeitsbranch vorbereiten. Ein Commit beschreibt einen zusammengehörigen Schritt und nennt passende Prüfungen. Zusätzlich zum Quellcode gibt es ein Mac-Downloadpaket unter GitHub Releases. Es ist eine lokal signierte, nicht notarisierte Vorabversion; keine App-Store-Veröffentlichung.

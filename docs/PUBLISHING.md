@@ -32,6 +32,12 @@ Die einzige Xcode-Projektdateiversion wurde über die aktuellen Ziel-Einstellung
 
 Das öffentliche Repository hat einen Hauptbranch und die Mac-Vorabversion 0.81 mit App-ZIP und Prüfsumme. Die Abschlussprüfung des ZIPs und der aktualisierten Veröffentlichung wird lokal mit Datum und Prüfsummen protokolliert.
 
+## Quellstand 0.82 veröffentlichen
+
+Die Weiterentwicklung von Figurenanimation und Beleuchtung enthält die Spieländerungen, einen separaten nativen Vergleich sowie die dokumentierten Messwerte in [verification-0.82.json](verification-0.82.json). README, Changelog und Prüfanleitung unterscheiden den Quellstand 0.82 vom weiterhin verfügbaren App-Download 0.81.
+
+Die vorhandenen lokalen Commits werden als normale Fortschreibung von `main` übertragen. Fertige Apps, Compilerdateien, private Arbeitsprotokolle und Originalreferenzen werden nicht in den Commit aufgenommen. Die erneute Prüfung umfasst den Git-Index und die gesamte lokale Historie; beide Xcode-Ziele werden separat auf Versionsnummer und persönliche Team-/Profilzuordnungen geprüft. Nach dem Push werden der GitHub-Branchstand und ausgewählte Dokumente zurückgelesen. Ein Push des Quellcodes erstellt keine neue herunterladbare App-Version.
+
 ## Grenzen
 
 Die Prüfung erkennt konkrete Dateitypen und Muster. Sie garantiert weder die Abwesenheit jedes denkbaren Geheimnisses noch Malwarefreiheit oder sämtliche Nutzungsrechte. Bei einem Fund zuerst die betreffende Datei prüfen; veröffentlichte Zugangsdaten müssten außerdem widerrufen werden. Eine Änderung der öffentlichen Git-Historie erfolgt gezielt nach einem konkreten Befund.

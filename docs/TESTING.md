@@ -1,10 +1,10 @@
 # Tests und nachgewiesener Stand
 
-Stand: 06.11.2026, lokale Entwicklungsversion 0.82. Der veröffentlichte Mac-Download bleibt auf 0.81. Getestet mit Xcode 27.0 auf einem Mac mit Apple-Chip.
+Stand: 06.11.2026, Quellstand 0.82. Der veröffentlichte Mac-Download bleibt auf 0.81. Getestet mit Xcode 27.0 auf einem Mac mit Apple-Chip.
 
-## Lokale Version 0.82: Animation und Beleuchtung
+## Version 0.82: Animation und Beleuchtung
 
-Die [Prüfübersicht 0.82](verification-0.82.json) enthält die Zahlen und Grenzen dieser lokalen Fassung.
+Die [Prüfübersicht 0.82](verification-0.82.json) enthält die Zahlen und Grenzen dieser Fassung.
 
 - Alle 55 Logikprogramme mit 6.163 PASS-Zeilen sowie drei normale und drei kooperative Acht-Runden-Simulationen erneut bestanden; ohne Godmode oder injizierte Ausrüstung.
 - Direkter Mac-Build und tvOS-Geräte-SDK-Build bestanden. Beide Xcode-Ziele und `VERSION` stehen auf 0.82 / 82; dies ist kein neuer Apple-TV-Gerätetest.

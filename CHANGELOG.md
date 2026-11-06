@@ -7,7 +7,7 @@
 - Das Inselwasser ist dunkler, die Normalenstruktur und Glanzspitzen sind zurückgenommen. Zusätzliche Texturen, Geometrie und Renderdurchläufe sind dafür nicht nötig.
 - Separaten nativen Vergleich für Gelenkbewegungen, Lebensdauer der Figurenverweise, sechs Lichtszenen und Renderzeiten ergänzt. Die ganze spielbare Karte bleibt in der bisherigen automatischen Ansicht.
 
-Lokaler Entwicklungsstand; der veröffentlichte Mac-Download bleibt 0.81. Ergebnisse und Grenzen stehen in [TESTING](docs/TESTING.md).
+Quellstand 0.82; der veröffentlichte Mac-Download bleibt 0.81. Ergebnisse und Grenzen stehen in [TESTING](docs/TESTING.md).
 
 ## GitHub-Auftritt und Dateiprüfung – 06.11.2026
 
