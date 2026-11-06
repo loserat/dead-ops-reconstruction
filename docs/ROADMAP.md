@@ -6,7 +6,7 @@ Die Reihenfolge priorisiert eine gut spielbare Mac-Version. Die Liste bezeichnet
 |---|---|---|
 | 1 | Hintergrundlast senken | Inaktive/minimierte Fenster zeichnen nicht unnötig weiter; Pause und Rückkehr funktionieren; Verbrauch wurde gemessen. |
 | 1 | Flüssigkeit bei hoher Last | Echte Bewegungsaktualisierung und Darstellung sind in festgelegten Mac-Lastfällen stabil; langsame Einzelbilder sind nachvollziehbar ausgewertet. |
-| 1 | 0.81 im normalen Betrieb abnehmen | Acht Runden im normalen Spielfenster, PS5-Bedienung, Pause/Rückkehr und Ton sind geprüft. |
+| 1 | 0.82 im normalen Betrieb abnehmen | Acht Runden im normalen Spielfenster, PS5-Bedienung, Pause/Rückkehr und Ton sind geprüft. |
 | 2 | Perspektive und Sichtbarkeit abstimmen | Ganze spielbare Karte, nahe Zugänge, Figuren und Funde sind bei normaler Fenstergröße gut erkennbar und vom Spieler bewertet. |
 | 2 | Bewegung und Gegnerdruck vergleichen | Laufgeschwindigkeit, Anmärsche und Wellentempo wurden anhand bewegter Originalreferenzen nachvollziehbar abgestimmt. |
 | 2 | Waffen und Fahrzeuge verfeinern | Wirkung, Kadenz, Reichweiten, Panzer-/Hubschraubergefühl und Übergänge haben dokumentierte Vergleichsgrundlagen. |

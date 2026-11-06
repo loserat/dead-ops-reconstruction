@@ -32,6 +32,8 @@ build.sh                        Direkter Mac-/tvOS-Build
 
 `Build/`, `Reference/`, `Project/`, lokale Textprotokolle und historische Arbeitsverzeichnisse werden nicht veröffentlicht. Der frühere Projektgenerator ist für einen Checkout nicht nötig. Änderungen an Xcode-Zielen oder Zielmitgliedschaften erfolgen in Xcode; das Projekt wird nicht im Build neu erzeugt.
 
+Menschliche Gegner besitzen ab 0.82 eigene zwischengespeicherte Gelenkverweise. Sie werden beim Einfügen des Modells gebunden und zusammen mit entfernten Gegnern freigegeben. Geteilte Geometrie enthält keine instanzabhängigen Gelenkverweise.
+
 ## Wichtige Regeln
 
 - Gegner werden entlang ihrer realen Anmarschwege bewegt. Die engere Kamera verändert weder Startorte noch Kollisionen.

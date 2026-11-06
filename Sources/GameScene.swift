@@ -67,7 +67,7 @@ final class GameView:SCNView {}
 
 final class ArcadeGame:NSObject,SKSceneDelegate {
     let inputMailbox=FrameInputMailbox()
-    let core=GameCore(),input=InputState(),scene=SCNScene(),camera=SCNNode(),sun=SCNNode()
+    let core=GameCore(),input=InputState(),scene=SCNScene(),camera=SCNNode(),sun=SCNNode(),ambient=SCNNode()
     let view:GameView
     let audio:ArcadeAudio
     let music:ArcadeMusic
@@ -108,6 +108,7 @@ final class ArcadeGame:NSObject,SKSceneDelegate {
     var fateLifeNodes:[Int:SCNNode]=[:]
     var lifeLinkNodes:[Int:SCNNode]=[:],lifeTransferNodes:[Int:SCNNode]=[:],directedRewardNodes:[Int:SCNNode]=[:]
     var foeNodes:[Int:SCNNode]=[:],shotNodes:[Int:SCNNode]=[:],pickupNodes:[Int:SCNNode]=[:],effectNodes:[Int:SCNNode]=[:]
+    var foeAnimationRigs:[Int:HumanCharacterRig]=[:]
     var arenaExitNodes:[Int:SCNNode]=[:]
     let transitCurtain=SKSpriteNode(color:.black,size:CGSize(width:1280,height:720))
     var transitCameraOrigin:SCNMatrix4?,transitCameraID:Int?
@@ -153,7 +154,7 @@ final class ArcadeGame:NSObject,SKSceneDelegate {
         sun.light?.shadowColor=rgb(0x17251b,0.42);sun.light?.shadowMode = .deferred;sun.light?.shadowRadius=2.5;sun.light?.shadowSampleCount=16
         sun.light?.shadowMapSize=CGSize(width:2048,height:2048);sun.light?.orthographicScale=32;sun.light?.shadowBias=0.025
         sun.eulerAngles=SCNVector3(-0.7,-0.65,0);scene.rootNode.addChildNode(sun)
-        let ambient=SCNNode();ambient.light=SCNLight();ambient.light?.type = .ambient;ambient.light?.color=rgb(0xb0bcc6);ambient.light?.intensity=340;scene.rootNode.addChildNode(ambient)
+        ambient.light=SCNLight();ambient.light?.type = .ambient;ambient.light?.color=rgb(0xb0bcc6);ambient.light?.intensity=340;scene.rootNode.addChildNode(ambient)
         scene.fogColor=rgb(0x395a58);scene.fogStartDistance=48;scene.fogEndDistance=85
         rebuildArena();hero.addChildNode(detailedCharacter(player:true));actors.addChildNode(hero)
         buildHUD();hint.numberOfLines=2;hint.preferredMaxLayoutWidth=1120;buildMenus();buildSideExit();view.overlaySKScene=hud
@@ -268,16 +269,21 @@ final class ArcadeGame:NSObject,SKSceneDelegate {
         else {for defeat in defeats {if let old=foeNodes[defeat.id] {addFallenBody(defeat,from:old)}}}
         animateFallenBodies()
         sync(&foeNodes,ids:Set(core.foes.map(\.id)))
+        for id in Array(foeAnimationRigs.keys) where foeNodes[id]==nil {foeAnimationRigs.removeValue(forKey:id)}
         for foe in core.foes {
             let n=foeNodes[foe.id] ?? (foe.kind == .hound ? houndModel():foe.kind == .martyr || foe.kind == .sasquatch ? sasquatchModel(explosive:foe.kind == .martyr):foe.kind == .engineer ? engineerModel():foe.kind == .crawler ? crawlerModel():detailedCharacter(player:false,variant:foe.id,prisoner:foe.kind == .prisoner))
             if foeNodes[foe.id]==nil{
                 if foe.kind == .villager {n.scale=SCNVector3(0.94,0.94,0.94)}
                 foeNodes[foe.id]=n;actors.addChildNode(n)
+                foeAnimationRigs[foe.id]=HumanCharacterRig(n)
             }
             n.position=SCNVector3(foe.p.x,foe.elevation+0.08,foe.p.y);let dir=foe.arrival?.heading ?? (core.players[core.targetSlot(near:foe.p,height:foe.elevation,magnet:foe.kind != .hound)].hero-foe.p);n.eulerAngles.x=foe.arrival?.kind == .water && foe.elevation < -0.05 ? -0.28:0;n.eulerAngles.y=NodeFloat(atan2(-dir.x,-dir.y))
-            n.childNode(withName:"leftLeg",recursively:false)?.eulerAngles.x=NodeFloat(sin(foe.gait)*0.4)
-            n.childNode(withName:"rightLeg",recursively:false)?.eulerAngles.x=NodeFloat(-sin(foe.gait)*0.4)
-            animateHumanCharacter(n,phase:foe.gait,amount:1,player:false)
+            if let rig=foeAnimationRigs[foe.id] {
+                animateHumanCharacter(rig,phase:foe.gait,amount:1,player:false)
+            }else{
+                n.childNode(withName:"leftLeg",recursively:false)?.eulerAngles.x=NodeFloat(sin(foe.gait)*0.4)
+                n.childNode(withName:"rightLeg",recursively:false)?.eulerAngles.x=NodeFloat(-sin(foe.gait)*0.4)
+            }
             if foe.kind == .crawler {animateCrawler(n,foe:foe)}
             if foe.kind == .hound {animateHound(n,foe:foe)}
         }
@@ -319,9 +325,7 @@ final class ArcadeGame:NSObject,SKSceneDelegate {
         }
         if arenaChanged || lastRound != core.round {
             lastRound=core.round
-            sun.light?.color=rgb(core.round%4==3 ? 0xffbc70:core.round%4==0 ? 0x7f9ad8:core.layout.kind != .island ? 0xf4f5ec:0xfff0ce)
-            sun.light?.intensity=core.round%4==0 ? 650:1000
-            if core.sideRoom != nil {sun.light?.color=rgb(0x8baeff);sun.light?.intensity=1250}
+            syncArenaLighting()
             decor.eulerAngles.y = 0
         }
         stat.text="LEBEN \(core.displayedLives)\(core.godMode ? "*":"")     BOMBEN \(core.bombs)     BOOST \(core.dashes)\(core.hasPlayerWounds ? " · "+core.playerWoundText:"")"

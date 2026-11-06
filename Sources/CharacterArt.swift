@@ -4,6 +4,22 @@ import simd
 
 private let humanTorsoProfile:[(w:Double,y:Double,d:Double)]=[(0.29,0.65,0.19),(0.31,0.73,0.205),(0.34,0.85,0.22),(0.405,1.0,0.235),(0.44,1.08,0.23),(0.405,1.13,0.215),(0.31,1.17,0.18)]
 
+/// Instance-local joints, resolved once when a live enemy enters the scene.
+/// Never put these on a template: SceneKit clones need their own joints.
+struct HumanCharacterRig {
+    let spine:SCNNode,leftLeg:SCNNode,rightLeg:SCNNode,leftKnee:SCNNode,rightKnee:SCNNode,leftArm:SCNNode,rightArm:SCNNode
+    init?(_ model:SCNNode) {
+        guard let spine=model.childNode(withName:"human-spine",recursively:false),
+              let left=model.childNode(withName:"leftLeg",recursively:false),
+              let right=model.childNode(withName:"rightLeg",recursively:false),
+              let leftKnee=left.childNode(withName:"human-knee",recursively:false),
+              let rightKnee=right.childNode(withName:"human-knee",recursively:false),
+              let leftArm=spine.childNode(withName:"player-arm-left",recursively:false),
+              let rightArm=spine.childNode(withName:"player-arm-right",recursively:false) else{return nil}
+        self.spine=spine;leftLeg=left;rightLeg=right;self.leftKnee=leftKnee;self.rightKnee=rightKnee;self.leftArm=leftArm;self.rightArm=rightArm
+    }
+}
+
 extension ArcadeGame {
     /// Own articulated geometry; static garment pieces merge before entering the scene.
     func humanCharacter(player:Bool,variant:Int,prisoner:Bool)->SCNNode {
@@ -203,25 +219,28 @@ extension ArcadeGame {
         return mesh(points,triangles,normals:normals,mat:mat)
     }
     func animateHumanCharacter(_ model:SCNNode,phase:Double,amount:Double,player:Bool,direction:V2=V2(x:0,y:-1)){
-        guard let spine=model.childNode(withName:"human-spine",recursively:false) else{return}
+        guard let rig=HumanCharacterRig(model) else{return}
+        animateHumanCharacter(rig,phase:phase,amount:amount,player:player,direction:direction)
+    }
+    func animateHumanCharacter(_ rig:HumanCharacterRig,phase:Double,amount:Double,player:Bool,direction:V2=V2(x:0,y:-1)){
+        let spine=rig.spine
         let stride=max(0,min(1,amount)),swing=sin(phase)*0.36*stride
-        for (name,sign) in [("leftLeg",1.0),("rightLeg",-1.0)] {
-            let leg=model.childNode(withName:name,recursively:false)
+        for (leg,knee,left,sign) in [(rig.leftLeg,rig.leftKnee,true,1.0),(rig.rightLeg,rig.rightKnee,false,-1.0)] {
             if player {
-                let pose=CharacterLegPose.plan(phase:phase,amount:stride,direction:direction,left:name=="leftLeg")
-                leg?.eulerAngles=SCNVector3(pose.pitch,pose.yaw,pose.roll)
-                leg?.childNode(withName:"human-knee",recursively:false)?.eulerAngles.x=NodeFloat(pose.knee)
+                let pose=CharacterLegPose.plan(phase:phase,amount:stride,direction:direction,left:left)
+                leg.eulerAngles=SCNVector3(pose.pitch,pose.yaw,pose.roll)
+                knee.eulerAngles.x=NodeFloat(pose.knee)
             }else{
-                leg?.eulerAngles.x=NodeFloat(swing*sign)
-                leg?.childNode(withName:"human-knee",recursively:false)?.eulerAngles.x=NodeFloat(max(0,-sin(phase)*sign)*0.32*stride)
+                leg.eulerAngles.x=NodeFloat(swing*sign)
+                knee.eulerAngles.x=NodeFloat(max(0,-sin(phase)*sign)*0.32*stride)
             }
         }
         spine.position.y=NodeFloat(abs(sin(phase*2))*0.018*stride)
         spine.eulerAngles.x=NodeFloat(player ? -0.025*stride:-0.14-0.035*sin(phase)*stride)
         spine.eulerAngles.z=NodeFloat(sin(phase)*(player ? 0.018:0.035)*stride)
         if !player {
-            spine.childNode(withName:"player-arm-left",recursively:false)?.eulerAngles.x=NodeFloat(-0.08+0.10*sin(phase+0.9)*stride)
-            spine.childNode(withName:"player-arm-right",recursively:false)?.eulerAngles.x=NodeFloat(0.02-0.12*sin(phase)*stride)
+            rig.leftArm.eulerAngles.x=NodeFloat(-0.08+0.10*sin(phase+0.9)*stride)
+            rig.rightArm.eulerAngles.x=NodeFloat(0.02-0.12*sin(phase)*stride)
         }
     }
 }

@@ -1,5 +1,14 @@
 # Änderungen
 
+## 0.82 – 06.11.2026: Figurenanimation und Licht für den Mac
+
+- Lebende menschliche Gegner behalten eigene Gelenkverweise. Wiederholte Knotensuchen und doppelte Beinbewegungen entfallen; besiegte Gegner geben die Verweise wieder frei.
+- Tages- und Abendlicht auf Insel und Innenhof erhalten deutlichere Schatten. Die kühle Nachtbeleuchtung wurde separat auf Lesbarkeit abgestimmt.
+- Das Inselwasser ist dunkler, die Normalenstruktur und Glanzspitzen sind zurückgenommen. Zusätzliche Texturen, Geometrie und Renderdurchläufe sind dafür nicht nötig.
+- Separaten nativen Vergleich für Gelenkbewegungen, Lebensdauer der Figurenverweise, sechs Lichtszenen und Renderzeiten ergänzt. Die ganze spielbare Karte bleibt in der bisherigen automatischen Ansicht.
+
+Lokaler Entwicklungsstand; der veröffentlichte Mac-Download bleibt 0.81. Ergebnisse und Grenzen stehen in [TESTING](docs/TESTING.md).
+
 ## GitHub-Auftritt und Dateiprüfung – 06.11.2026
 
 - README kürzer und einladender gestaltet: Download, erste Schritte und Bilder stehen vor den Entwicklerdetails.

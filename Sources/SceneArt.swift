@@ -15,6 +15,21 @@ struct ArtRandom {
 }
 
 extension ArcadeGame {
+    /// Reference-inspired first-eight light cycle, using the existing two lights.
+    /// No extra shadow maps, screen-space passes or geometry are introduced.
+    func syncArenaLighting() {
+        let opening=core.layout.kind == .island || core.layout.kind == .courtyard
+        let evening=core.round%4==3,night=core.round%4==0
+        sun.light?.color=rgb(evening ? 0xffbc70:night ? (opening ? 0x91abe4:0x7f9ad8):core.layout.kind != .island ? 0xf4f5ec:0xfff0ce)
+        sun.light?.intensity=night ? (opening ? 800:650):1000
+        ambient.light?.color=rgb(opening ? (night ? 0x9cafd8:evening ? 0x9b9baf:0xa8b7c5):0xb0bcc6)
+        ambient.light?.intensity=opening ? (night ? 285:evening ? 210:225):340
+        sun.light?.shadowColor=rgb(0x17251b,opening ? 0.62:0.42)
+        if core.sideRoom != nil {
+            sun.light?.color=rgb(0x8baeff);sun.light?.intensity=1250
+            ambient.light?.color=rgb(0xb0bcc6);ambient.light?.intensity=340;sun.light?.shadowColor=rgb(0x17251b,0.42)
+        }
+    }
     func artMaterial(_ name:String,_ color:Int)->SCNMaterial {
         let personal=name=="cloth-player" || name=="player-vehicle-badge",key=personal ? ownerMaterialKey(name):name
         if key != name,artMaterials[key]==nil,let original=artMaterials[name],let copy=original.copy() as? SCNMaterial {artMaterials[key]=copy}
@@ -224,7 +239,8 @@ extension ArcadeGame {
     }
     func buildDetailedIsland() {
         let seaGeometry=SCNPlane(width:240,height:240)
-        let seaMat=material(0x476e78);seaMat.lightingModel = .blinn;seaMat.specular.contents=rgb(0x7a9394);seaMat.shininess=45
+        let seaMat=material(0x344e58);seaMat.lightingModel = .blinn;seaMat.specular.contents=rgb(0x657c88);seaMat.shininess=28
+        seaMat.normal.intensity=0.55
         seaMat.normal.contents=waterNormals();seaMat.normal.wrapS = .repeat;seaMat.normal.wrapT = .repeat
         seaMat.normal.contentsTransform=waterNormalTransform(now:0);artMaterials["water"]=seaMat
         seaGeometry.materials=[seaMat];let sea=SCNNode(geometry:seaGeometry);sea.eulerAngles.x = -NodeFloat.pi/2;sea.position.y = -0.24;decor.addChildNode(sea)

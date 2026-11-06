@@ -1,0 +1,314 @@
+{
+  "version": "0.82",
+  "date": "2026-11-06",
+  "publication": "Local only; published v0.81 unchanged",
+  "logic": {
+    "programs": 55,
+    "pass_lines": 6163,
+    "exit": 0
+  },
+  "opening_runs": {
+    "normal": 3,
+    "cooperative": 3,
+    "godmode": false,
+    "exit": 0
+  },
+  "builds": {
+    "direct_mac": "passed",
+    "direct_tv_device_sdk": "passed",
+    "xcode_target_versions": "0.82 / 82 verified through Xcode tools",
+    "new_xcode_build": false,
+    "AppleTV_hardware": false
+  },
+  "native": {
+    "package_exit": 0,
+    "character_art_exit": 0,
+    "camera_art_exit": 0,
+    "defeated_bodies_exit": 0,
+    "pose_components_checked": 24192,
+    "static_lighting_pairs": 6,
+    "window_capture": false
+  },
+  "animation_176_before": {
+    "max_ms": 1.0072081349790096,
+    "p50_ms": 0.6439583376049995,
+    "p95_ms": 0.7413332350552082,
+    "samples": 900
+  },
+  "animation_176_after": {
+    "max_ms": 8.490458130836487,
+    "p50_ms": 0.3103334456682205,
+    "p95_ms": 0.471500214189291,
+    "samples": 900
+  },
+  "lighting_offscreen": [
+    {
+      "after_CPU_encode": {
+        "max_ms": 8.939458522945642,
+        "p50_ms": 3.3427500165998936,
+        "p95_ms": 4.065458197146654,
+        "samples": 160
+      },
+      "after_GPU_buffer": {
+        "max_ms": 5.794083699584007,
+        "p50_ms": 3.091499675065279,
+        "p95_ms": 3.971999976783991,
+        "samples": 160
+      },
+      "before_CPU_encode": {
+        "max_ms": 13.048999942839146,
+        "p50_ms": 3.4296251833438873,
+        "p95_ms": 3.8469997234642506,
+        "samples": 160
+      },
+      "before_GPU_buffer": {
+        "max_ms": 5.916041787713766,
+        "p50_ms": 3.0956249684095383,
+        "p95_ms": 4.128041677176952,
+        "samples": 160
+      },
+      "calibrated_mean": 7.411095225127089e-08,
+      "foes": 176,
+      "height": 1440,
+      "HUD_mean": 0,
+      "HUD_pixels": 2062,
+      "round": 1,
+      "width": 2560
+    },
+    {
+      "after_CPU_encode": {
+        "max_ms": 4.0786247700452805,
+        "p50_ms": 3.448041621595621,
+        "p95_ms": 3.763708285987377,
+        "samples": 160
+      },
+      "after_GPU_buffer": {
+        "max_ms": 3.639332950115204,
+        "p50_ms": 3.0357912182807922,
+        "p95_ms": 3.216375131160021,
+        "samples": 160
+      },
+      "before_CPU_encode": {
+        "max_ms": 11.99029153212905,
+        "p50_ms": 3.279833123087883,
+        "p95_ms": 4.092833027243614,
+        "samples": 160
+      },
+      "before_GPU_buffer": {
+        "max_ms": 10.99883345887065,
+        "p50_ms": 3.115125000476837,
+        "p95_ms": 7.375791668891907,
+        "samples": 160
+      },
+      "calibrated_mean": 1.1205292302106027e-07,
+      "foes": 176,
+      "height": 1440,
+      "HUD_mean": 0,
+      "HUD_pixels": 2086,
+      "round": 8,
+      "width": 2560
+    }
+  ],
+  "window_before_cases": [
+    {
+      "fixture_foes": 0,
+      "groups": [
+        {
+          "over25ms": 0,
+          "p50_ms": 8.336208295077085,
+          "p95_ms": 10.367083363234997,
+          "samples": 951,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 0,
+        "pickups": 0,
+        "shots": 55,
+        "vehicles": 0
+      },
+      "players": 1,
+      "round": 1,
+      "tick_p95_ms": 1.3930420391261578,
+      "whole_map_scale": 12.474367622479184
+    },
+    {
+      "fixture_foes": 80,
+      "groups": [
+        {
+          "over25ms": 0,
+          "p50_ms": 8.313624653965235,
+          "p95_ms": 14.189749956130981,
+          "samples": 961,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 80,
+        "pickups": 0,
+        "shots": 55,
+        "vehicles": 0
+      },
+      "players": 1,
+      "round": 4,
+      "tick_p95_ms": 1.3152919709682465,
+      "whole_map_scale": 12.544732170770846
+    },
+    {
+      "fixture_foes": 80,
+      "groups": [
+        {
+          "over25ms": 0,
+          "p50_ms": 8.328374940901995,
+          "p95_ms": 14.277958311140537,
+          "samples": 959,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 80,
+        "pickups": 0,
+        "shots": 55,
+        "vehicles": 0
+      },
+      "players": 1,
+      "round": 5,
+      "tick_p95_ms": 1.4587915502488613,
+      "whole_map_scale": 13.026689627285801
+    },
+    {
+      "fixture_foes": 180,
+      "groups": [
+        {
+          "over25ms": 4,
+          "p50_ms": 8.89041693881154,
+          "p95_ms": 20.305749960243702,
+          "samples": 723,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 176,
+        "pickups": 32,
+        "shots": 145,
+        "vehicles": 2
+      },
+      "players": 4,
+      "round": 8,
+      "tick_p95_ms": 4.065124783664942,
+      "whole_map_scale": 15.974895451601732
+    }
+  ],
+  "window_after_cases": [
+    {
+      "fixture_foes": 0,
+      "groups": [
+        {
+          "over25ms": 0,
+          "p50_ms": 8.324500173330307,
+          "p95_ms": 9.374083019793034,
+          "samples": 958,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 0,
+        "pickups": 0,
+        "shots": 55,
+        "vehicles": 0
+      },
+      "players": 1,
+      "round": 1,
+      "tick_p95_ms": 0.9679170325398445,
+      "whole_map_scale": 12.474367622479184
+    },
+    {
+      "fixture_foes": 80,
+      "groups": [
+        {
+          "over25ms": 0,
+          "p50_ms": 8.337625302374363,
+          "p95_ms": 11.82020828127861,
+          "samples": 946,
+          "state": "visible-active"
+        },
+        {
+          "over25ms": 0,
+          "p50_ms": 8.403458632528782,
+          "p95_ms": 10.449625086039305,
+          "samples": 12,
+          "state": "visible-inactive"
+        }
+      ],
+      "peak_counts": {
+        "foes": 80,
+        "pickups": 0,
+        "shots": 55,
+        "vehicles": 0
+      },
+      "players": 1,
+      "round": 4,
+      "tick_p95_ms": 1.199833583086729,
+      "whole_map_scale": 12.544732170770846
+    },
+    {
+      "fixture_foes": 80,
+      "groups": [
+        {
+          "over25ms": 0,
+          "p50_ms": 8.31608334556222,
+          "p95_ms": 14.204749837517738,
+          "samples": 960,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 80,
+        "pickups": 0,
+        "shots": 55,
+        "vehicles": 0
+      },
+      "players": 1,
+      "round": 5,
+      "tick_p95_ms": 1.3393331319093704,
+      "whole_map_scale": 13.026689627285801
+    },
+    {
+      "fixture_foes": 180,
+      "groups": [
+        {
+          "over25ms": 6,
+          "p50_ms": 8.099374826997519,
+          "p95_ms": 18.405833281576633,
+          "samples": 804,
+          "state": "visible-active"
+        }
+      ],
+      "peak_counts": {
+        "foes": 176,
+        "pickups": 32,
+        "shots": 100,
+        "vehicles": 2
+      },
+      "players": 4,
+      "round": 8,
+      "tick_p95_ms": 3.0988329090178013,
+      "whole_map_scale": 15.975404937707832
+    }
+  ],
+  "window_backing_scale": 2,
+  "gpu": "Apple M1 Pro",
+  "limits": [
+    "Synthetic short window load; not normal human play",
+    "Median animation time is not overall FPS",
+    "Window movement/effect counts vary with real time; descriptive comparison only",
+    "Spikes above25ms remain; stable60FPS not accepted",
+    "Inactive run retained separately; brief focus change grouped separately",
+    "No physical controller, listening or AppleTV hardware verification",
+    "Reference-inspired own lighting, not original engine or assets"
+  ],
+  "source_inputs": {
+    "path": "work/maintenance/mac-render-2026-11-06/source-inputs-0.82.json",
+    "sha256": "fead89899b065f3b3010502649c38a0bc5048bd2261d829a776b6bece9a88f9e"
+  }
+}
