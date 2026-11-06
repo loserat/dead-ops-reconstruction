@@ -18,11 +18,14 @@ Vor dem Hochladen:
 
 ```sh
 python3 scripts/check_docs.py
+python3 scripts/check_publication.py --history
 git status --short
 git diff --cached --stat
 ```
 
 `VERSION`, die Versionsangaben beider Xcode-Ziele und die Dokumentation bei einem Versionswechsel gemeinsam anpassen. Persönliche Signierungseinstellungen nicht committen. Ein Tag kennzeichnet einen konkreten Quellstand; er ersetzt keine Hardwareprüfung.
+
+Die Dateiprüfung untersucht den vorgemerkten Git-Index; geplante neue Dateien vorher bewusst hinzufügen. Ablauf und Prüfgrenzen stehen unter [Veröffentlichungsprüfung](PUBLISHING.md).
 
 ## Mac-Download erstellen
 

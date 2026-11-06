@@ -7,3 +7,5 @@ Fehlerberichte enthalten die Version, den betroffenen Spielabschnitt, die verwen
 Änderungen möglichst auf einen Schwerpunkt begrenzen. Im Änderungstext erklären, welches Verhalten sich ändert und welche Prüfungen tatsächlich gelaufen sind. Umgesetzt, technisch getestet und am echten Gerät geprüft getrennt angeben. Originalwerte nur als bestätigt bezeichnen, wenn eine konkrete Quelle oder Beobachtung vorliegt.
 
 Spielregeln, Lebensschwellen, Controllerrollen und Anmarschwege bei reinen Grafikänderungen erhalten. Persönliche Musik, Zertifikate, lokale Pfade und Build-Dateien gehören nicht in einen Commit. Vor der Übernahme fremder Inhalte Herkunft und Lizenz klären. Der [Lizenzstatus](LICENSE.md) ist bisher nicht als Open-Source-Freigabe festgelegt.
+
+Vor einem Upload die vorgesehenen Dateien vormerken und `python3 scripts/check_docs.py` sowie `python3 scripts/check_publication.py --history` ausführen. Die [Veröffentlichungsprüfung](docs/PUBLISHING.md) beschreibt den Umfang und die zusätzlichen Xcode-/Paketkontrollen.

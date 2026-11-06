@@ -1,5 +1,12 @@
 # Änderungen
 
+## GitHub-Auftritt und Dateiprüfung – 06.11.2026
+
+- README kürzer und einladender gestaltet: Download, erste Schritte und Bilder stehen vor den Entwicklerdetails.
+- Öffentliche Dateien, bisherige Git-Historie, Bildmetadaten und Xcode-Signierungszuordnungen überprüft.
+- Dokumentationspfade und ausgeschlossene sensible Dateitypen enger begrenzt.
+- Wiederverwendbare Prüfung des Git-Index und der Historie ergänzt. Spielquellen, Grafikdateien und Mac-Download bleiben auf Stand 0.81.
+
 ## Mac-Download 0.81 – 03.11.2026
 
 - Fertige Mac-Vorabversion für Apple Silicon und macOS 14+ als GitHub-Release vorbereitet.
